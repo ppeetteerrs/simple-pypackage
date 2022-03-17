@@ -37,4 +37,4 @@ about:
   license: {{ data["license"] }}
   license_file: LICENSE
   dev_url: {{ data["url"] }}
-  doc_url: https://ppeetteerrs.github.io/simple_pypackage
+  doc_url: https://ppeetteerrs.github.io/simple-pypackage

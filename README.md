@@ -7,6 +7,7 @@
 [![anaconda](https://img.shields.io/conda/vn/ppeetteerrs/simple-pypackage?logo=anaconda)]()
 ![platform](https://img.shields.io/conda/pn/ppeetteerrs/simple-pypackage?label=platform&color=blueviolet)
 [![codecov](https://img.shields.io/codecov/c/github/ppeetteerrs/simple-pypackage?label=codecov&logo=codecov)](https://app.codecov.io/gh/ppeetteerrs/simple-pypackage)
+[![docs](https://img.shields.io/github/deployments/ppeetteerrs/simple-pypackage/github-pages?label=docs&logo=readthedocs)](https://ppeetteerrs.github.io/simple-pypackage)
 
 # Setup
 
