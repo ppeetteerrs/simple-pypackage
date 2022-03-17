@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Home - simple-pypackage</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.2.3, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="./css/style.min.css" rel="stylesheet">
+<link href="assets/_mkdocstrings.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href="." target="_blank" class="custom-link">simple-pypackage</a>
+</li>
+<li class="divider"></li>
+<li class="chapter active" data-path="">
+<a href=".">Home</a>
+<li class="chapter" data-path="setup/">
+<a href="setup/">Setup</a>
+<li class="chapter" data-path="usage/">
+<a href="usage/">Usage</a>
+<li class="chapter" data-path="faq/">
+<a href="faq/">FAQ</a>
+<li class="chapter" data-path="https://github.com/ppeetteerrs/simple-pypackage/issues">
+<a href="https://github.com/ppeetteerrs/simple-pypackage/issues">Report Issues</a>
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+
+<section class="normal markdown-section">
+
+
+
+
+
+
+<h1 id="simple-pypackage">Simple Pypackage<a class="headerlink" href="#simple-pypackage" title="Permanent link">&para;</a></h1>
+<p><strong>A clean, automated setup for publishing simple Python packages to PyPI and Anaconda.</strong></p>
+<p><img alt="action" src="https://img.shields.io/github/workflow/status/ppeetteerrs/simple-pypackage/build?logo=githubactions&amp;logoColor=white" />
+<a href="https://pypi.python.org/pypi/simple-pypackage"><img alt="pypi" src="https://img.shields.io/pypi/v/simple-pypackage.svg" /></a>
+<a href="https://anaconda.org/ppeetteerrs/simple-pypackage"><img alt="anaconda" src="https://img.shields.io/conda/vn/ppeetteerrs/simple-pypackage?logo=anaconda" /></a>
+<img alt="platform" src="https://img.shields.io/conda/pn/ppeetteerrs/simple-pypackage?label=platform&amp;color=blueviolet" />
+<a href="https://app.codecov.io/gh/ppeetteerrs/simple-pypackage"><img alt="codecov" src="https://img.shields.io/codecov/c/github/ppeetteerrs/simple-pypackage?label=codecov&amp;logo=codecov" /></a>
+<a href="https://ppeetteerrs.github.io/simple-pypackage"><img alt="docs" src="https://img.shields.io/github/deployments/ppeetteerrs/simple-pypackage/github-pages?label=docs&amp;logo=readthedocs" /></a></p>
+<h1 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h1>
+<h2 id="prepare-github-repo">Prepare GitHub Repo<a class="headerlink" href="#prepare-github-repo" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Create new GitHub repository / fork this repository</li>
+<li>Setup PyPI and Anaconda Credentials in repository secrets</li>
+<li><code>PYPI_USER</code>: PyPI username (use <code>__token__</code> for API key authentication)</li>
+<li><code>PYPI_PASSWORD</code>: PyPI password (use token including the <code>pypi-</code> prefix for API key authentication)</li>
+<li><code>ANACONDA_API_TOKEN</code>: Anaconda API token</li>
+<li><strong>After first release</strong>: Go to <code>Settings</code> and activate your GitHub Pages using the <code>gh-pages</code> branch</li>
+</ol>
+<h2 id="edit-files">Edit Files<a class="headerlink" href="#edit-files" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Rename <code>simple_pypackage</code> folder to your package name</li>
+<li>Replace all <code>simple-pypackage</code>, <code>simple_pypackage</code>, <code>ppeetteerrs</code> and <code>Peter Yuen</code> with your package name, package slug, username and author name in these files:<ul>
+<li><code>.devcontainer.json</code></li>
+<li><code>mkdocs.yaml</code></li>
+<li><code>README.md</code></li>
+<li><code>setup.py</code></li>
+<li><code>.github/workflows/build.yaml</code></li>
+<li><code>conda-recipe/meta.yaml</code></li>
+<li><code>{project_name}/__init__.py</code></li>
+</ul>
+</li>
+<li>Change your minimum Python version in <code>setup.py</code>, <code>.github/workflows/build.yaml</code> and <code>.github/workflows/upload.yaml</code></li>
+</ul>
+<h2 id="github-workflow">GitHub Workflow<a class="headerlink" href="#github-workflow" title="Permanent link">&para;</a></h2>
+<ul>
+<li>On push / pull request to <code>main</code> branch:<ul>
+<li>Try to build PyPI and Conda packages</li>
+<li>Run <code>pytest</code> and <code>codecov</code> on all OS types</li>
+</ul>
+</li>
+<li>On release created:<ul>
+<li>Build and publish package to PyPI and Anaconda (version is automatically inferred from repo tag)</li>
+<li>Update docs</li>
+</ul>
+</li>
+</ul>
+<h2 id="docker-dev-container">Docker Dev Container<a class="headerlink" href="#docker-dev-container" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A <code>.devcontainer.json</code> with my favourite setup is included &lt;3. Use <code>VSCode =&gt; Reopen in container</code> to use it if desired.</li>
+</ul>
+<h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h1>
+<h2 id="important-gotchas"><strong>Important Gotchas</strong><a class="headerlink" href="#important-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Make sure all product dependencies are available on both <code>conda-forge</code> and <code>pypi</code></li>
+<li>Repo version tags must be of the format <code>vX.Y.Z</code> with lowercase <code>v</code></li>
+<li>If GitHub Actions are not triggering, check <a href="https://www.githubstatus.com/">here</a> to make sure it is not because of an outrage.</li>
+<li>Upload to Codecov might fail if you commit your repository too fast after creation / if you have not logged in to Codecov via GitHub. Just re-run the GitHub action in that case.</li>
+</ul>
+<h2 id="things-you-can-do">Things You Can Do<a class="headerlink" href="#things-you-can-do" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Conda Description</strong>: Write a longer and better description for <code>conda-recipe/meta.yaml</code>.</li>
+<li><strong>Extra Branches</strong>: Separate into <code>dev</code> or <code>feature</code> branches. You might want to add GitHub Action triggers to push / pull requests to those branches.</li>
+<li><strong>Tests</strong>: Write tests in <code>pytest</code>. Other testing framework would require minor changes.</li>
+<li><strong>Documentation</strong>: Write some nice documentation in the <code>docs</code> directory.</li>
+<li><strong>Improve setup.py</strong>: You can add <code>description</code>, <code>package_data</code>, <code>classifiers</code> and <code>keywords</code> to your <code>setup.py</code>.</li>
+</ul>
+
+
+
+</section>
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="./js/main.js"></script>
+<script src="./js/gitbook.min.js"></script>
+<script src="./js/theme.min.js"></script>
+</body>
+</html>

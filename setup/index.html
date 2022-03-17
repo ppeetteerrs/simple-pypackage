@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Setup - simple-pypackage</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.2.3, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../css/style.min.css" rel="stylesheet">
+<link href="../assets/_mkdocstrings.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href=".." target="_blank" class="custom-link">simple-pypackage</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="..">Home</a>
+<li class="chapter active" data-path="setup/">
+<a href="./">Setup</a>
+<li class="chapter" data-path="usage/">
+<a href="../usage/">Usage</a>
+<li class="chapter" data-path="faq/">
+<a href="../faq/">FAQ</a>
+<li class="chapter" data-path="https://github.com/ppeetteerrs/simple-pypackage/issues">
+<a href="https://github.com/ppeetteerrs/simple-pypackage/issues">Report Issues</a>
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+
+<section class="normal markdown-section">
+
+
+
+
+
+
+<h1 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h1>
+<h2 id="prepare-github-repo">Prepare GitHub Repo<a class="headerlink" href="#prepare-github-repo" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Create new GitHub repository / fork this repository</li>
+<li>Setup PyPI and Anaconda Credentials in repository secrets</li>
+<li><code>PYPI_USER</code>: PyPI username (use <code>__token__</code> for API key authentication)</li>
+<li><code>PYPI_PASSWORD</code>: PyPI password (use token including the <code>pypi-</code> prefix for API key authentication)</li>
+<li><code>ANACONDA_API_TOKEN</code>: Anaconda API token</li>
+<li><strong>After first release</strong>: Go to <code>Settings</code> and activate your GitHub Pages using the <code>gh-pages</code> branch</li>
+</ol>
+<h2 id="edit-files">Edit Files<a class="headerlink" href="#edit-files" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Rename <code>simple_pypackage</code> folder to your package name</li>
+<li>Replace all <code>simple-pypackage</code>, <code>simple_pypackage</code>, <code>ppeetteerrs</code> and <code>Peter Yuen</code> with your package name, package slug, username and author name in these files:<ul>
+<li><code>.devcontainer.json</code></li>
+<li><code>mkdocs.yaml</code></li>
+<li><code>README.md</code></li>
+<li><code>setup.py</code></li>
+<li><code>.github/workflows/build.yaml</code></li>
+<li><code>conda-recipe/meta.yaml</code></li>
+<li><code>{project_name}/__init__.py</code></li>
+</ul>
+</li>
+<li>Change your minimum Python version in <code>setup.py</code>, <code>.github/workflows/build.yaml</code> and <code>.github/workflows/upload.yaml</code></li>
+</ul>
+<h2 id="github-workflow">GitHub Workflow<a class="headerlink" href="#github-workflow" title="Permanent link">&para;</a></h2>
+<ul>
+<li>On push / pull request to <code>main</code> branch:<ul>
+<li>Try to build PyPI and Conda packages</li>
+<li>Run <code>pytest</code> and <code>codecov</code> on all OS types</li>
+</ul>
+</li>
+<li>On release created:<ul>
+<li>Build and publish package to PyPI and Anaconda (version is automatically inferred from repo tag)</li>
+<li>Update docs</li>
+</ul>
+</li>
+</ul>
+<h2 id="docker-dev-container">Docker Dev Container<a class="headerlink" href="#docker-dev-container" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A <code>.devcontainer.json</code> with my favourite setup is included &lt;3. Use <code>VSCode =&gt; Reopen in container</code> to use it if desired.</li>
+</ul>
+
+
+
+</section>
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../js/main.js"></script>
+<script src="../js/gitbook.min.js"></script>
+<script src="../js/theme.min.js"></script>
+</body>
+</html>
