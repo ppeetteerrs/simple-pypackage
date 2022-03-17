@@ -10,7 +10,7 @@
 
 ## Edit Files
 - Rename `simple_pypackage` folder to your package name
-- Replace all `simple_pypackage`, `ppeetteerrs` and `Peter Yuen` with your package name, username and author name in these files:
+- Replace all `simple-pypackage`, `simple_pypackage`, `ppeetteerrs` and `Peter Yuen` with your package name, package slug, username and author name in these files:
 	- `.devcontainer.json`
 	- `mkdocs.yaml`
 	- `README.md`

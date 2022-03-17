@@ -1,8 +1,8 @@
-site_name: simple_pypackage
+site_name: simple-pypackage
 
-site_url: https://ppeetteerrs.github.io/simple_pypackage
+site_url: https://ppeetteerrs.github.io/simple-pypackage
 
-repo_url: https://github.com/ppeetteerrs/simple_pypackage
+repo_url: https://github.com/ppeetteerrs/simple-pypackage
 
 theme:
     palette:
@@ -37,6 +37,6 @@ nav:
     - Installation: installation.md
     - Setup: setup.md
     - FAQ: faq.md
-    - Report Issues: https://github.com/ppeetteerrs/simple_pypackage/issues
+    - Report Issues: https://github.com/ppeetteerrs/simple-pypackage/issues
     # - API Reference:
     #       - simple_pypackage module: simple_pypackage.md

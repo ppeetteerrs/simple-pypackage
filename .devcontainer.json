@@ -5,7 +5,7 @@
 	},
 	"runArgs": [
 		"--name",
-		"simple_pypackage"
+		"simple-pypackage"
 	],
 	"extensions": [
 		"ms-python.vscode-pylance",

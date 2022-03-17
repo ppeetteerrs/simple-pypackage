@@ -1,5 +1,5 @@
-import simple_pypackage
 import pytest
+import simple_pypackage
 
 
 @pytest.fixture

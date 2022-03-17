@@ -2,11 +2,11 @@
 
 **A clean, automated setup for publishing simple Python packages to PyPI and Anaconda.**
 
-![action](https://img.shields.io/github/workflow/status/ppeetteerrs/simple_pypackage/build?logo=githubactions&logoColor=white)
-[![pypi](https://img.shields.io/pypi/v/simple_pypackage.svg)](https://pypi.python.org/pypi/simple_pypackage)
-[![anaconda](https://img.shields.io/conda/vn/ppeetteerrs/simple_pypackage?logo=anaconda)]()
-![platform](https://img.shields.io/conda/pn/ppeetteerrs/simple_pypackage?label=platform&color=blueviolet)
-[![codecov](https://img.shields.io/codecov/c/github/ppeetteerrs/simple_pypackage?label=codecov&logo=codecov)](https://app.codecov.io/gh/ppeetteerrs/simple_pypackage)
+![action](https://img.shields.io/github/workflow/status/ppeetteerrs/simple-pypackage/build?logo=githubactions&logoColor=white)
+[![pypi](https://img.shields.io/pypi/v/simple-pypackage.svg)](https://pypi.python.org/pypi/simple-pypackage)
+[![anaconda](https://img.shields.io/conda/vn/ppeetteerrs/simple-pypackage?logo=anaconda)]()
+![platform](https://img.shields.io/conda/pn/ppeetteerrs/simple-pypackage?label=platform&color=blueviolet)
+[![codecov](https://img.shields.io/codecov/c/github/ppeetteerrs/simple-pypackage?label=codecov&logo=codecov)](https://app.codecov.io/gh/ppeetteerrs/simple-pypackage)
 
 # Setup
 
@@ -20,7 +20,7 @@
 
 ## Edit Files
 - Rename `simple_pypackage` folder to your package name
-- Replace all `simple_pypackage`, `ppeetteerrs` and `Peter Yuen` with your package name, username and author name in these files:
+- Replace all `simple-pypackage`, `simple_pypackage`, `ppeetteerrs` and `Peter Yuen` with your package name, package slug, username and author name in these files:
 	- `.devcontainer.json`
 	- `mkdocs.yaml`
 	- `README.md`
